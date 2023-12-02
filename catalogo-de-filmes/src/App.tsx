@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import logo from './assets/logo250ajustado.png'
+import addLogo from './assets/add.png'
 import './App.css'
 
 function App() {
@@ -11,11 +12,15 @@ function App() {
         <div className="header">
           <div className="nav">
             <img src={logo} alt="" />
-            <li>Cadastrar</li>
+           
+            <li> <img src={addLogo} alt=""  width='20px'/>Cadastrar</li>
             <li>Todos os filmes</li>
           </div>
         </div>
-        <hr />
+      <hr />
+        <div className="section">
+          <p>{}</p>
+        </div>
         
       </div>
     </>
