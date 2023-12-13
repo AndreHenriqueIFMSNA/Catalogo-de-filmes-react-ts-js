@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto+Slab&display=swa');
 
 body{
-  background-color:#c1d2dc; 
+  background-color:rgb(228, 240, 178); 
   font-family: 'Roboto Slab', serif;;
 }
 
 .nav{
-  width: 100vw;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 #img-logo{
@@ -19,6 +19,7 @@ body{
 .nav-list{
   display: flex;
   align-items: center;
+
   
 }
 
@@ -49,22 +50,25 @@ form{
   flex-direction: column;
 }
 
-hr{
-  border-style:outset;
-  border-top-left-radius: 100%;
-  border-top-right-radius: 100%;
-}
+
 
 
 /*
 CSS REGISTRO DO CARD
 */
 
+h4{
+  text-align: center;
+  margin-top: 3vw;
+  margin-bottom: 0px;
+  padding: 0;
+}
+
 .section-cardCadastro{
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column-reverse;
+  flex-direction: column;
   flex-wrap: wrap;
 }
 
@@ -81,14 +85,50 @@ CSS REGISTRO DO CARD
 
 }
 
+#imagem-cadastro-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 #imagem-cadastro{
   min-width: auto;
   max-width: 100%;
+  width: 50vw;
 }
+
 
 .set-card{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+hr{
+  background-color: aliceblue;
+  width: 100%;
+}
+
+.todos-os-filmes{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button{
+  border-width: 1px;
+  border-style:outset;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover{
+  box-shadow: 1px 1px 1px 1px;
+}
+
+input{
+  border-width: 1px;
+  border-style:outset;
+  border-radius: 5px;
 }

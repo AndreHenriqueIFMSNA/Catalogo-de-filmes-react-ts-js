@@ -1,21 +1,20 @@
-import { useState } from 'react'
-import CardCadastro from './cardCadastro'
-import logo from './assets/logo250ajustado.png'
-import addLogo from './assets/add.png'
-import './App.css'
-
-
+import { useState } from 'react';
+import CardCadastro from './cardCadastro';
+import logo from './assets/logo250ajustado.png';
+import addLogo from './assets/add.png';
+import './App.css';
 
 function App() {
-
   const [mostrarCadastro, setMostrarCadastro] = useState(false);
-
+  const [todosOsFilmes, setTodosOsFilmes] = useState(false);
 
   const CadastrarClick = () => {
-    // Altera o estado para exibir a div de cadastro
     setMostrarCadastro(true);
   };
 
+  const VisualizarTodosFilmesClick = () => {
+    setTodosOsFilmes((prevTodosOsFilmes) => !prevTodosOsFilmes);
+  };
 
   return (
     <>
@@ -23,19 +22,19 @@ function App() {
         <div className="header">
           <div className="nav">
             <img src={logo} alt="" width='60px' id='img-logo'/>
-              <div className="nav-list">
+            <br />
+            <div className="nav-list">
               <li onClick={CadastrarClick}>
                 <img src={addLogo} alt="" width="20px" />
-                Cadastrar Filmes
+                MENU
               </li>
             </div>
           </div>
         </div>
       </div>
-      {mostrarCadastro && <CardCadastro />}
+      {mostrarCadastro && <CardCadastro VisualizarTodosFilmesClick={VisualizarTodosFilmesClick} todosOsFilmes={todosOsFilmes} />}
     </>
   );
-
 }
 
-export default App
+export default App;
